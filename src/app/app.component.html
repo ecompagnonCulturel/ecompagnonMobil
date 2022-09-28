@@ -1,0 +1,95 @@
+<ion-app>
+    <ion-split-pane contentId="main-content">
+        <ion-menu class="custom-menu" contentId="main-content" side="start" type="overlay" swipeGesture="false">
+            <ion-header>
+                <ion-toolbar color="secondary">
+                    <ion-title>Menu</ion-title>
+                </ion-toolbar>
+            </ion-header>
+            <ion-content>
+
+                <ion-list>
+                  <ion-menu-toggle autoHide="false">
+
+                           <ion-item lines="none"  class="accueil" routerLink="home" routerLinkActive="active-link">
+                               <span class="material-icons blue">
+                              water_damage
+                              </span>
+                                            Accueil
+                        </ion-item>
+
+                   </ion-menu-toggle>
+                     <ion-menu-toggle autoHide="false">
+                        <ion-item routerLink="home/resource/category" routerLinkActive="active-link">
+                              <span class="material-icons blue">
+                                gradient
+                                </span>
+                            Ressources culturelles mobilisées dans des cours du BÉPEP
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle autoHide="false">
+                        <ion-item routerLink="home/favoris" lines="none">
+                           <span class="material-icons blue">
+                            star_border
+                          </span>
+                            Mes ressources favorites
+                        </ion-item>
+                    </ion-menu-toggle>
+                    <ion-menu-toggle autoHide="false">
+                        <ion-item routerLink="/questionnaire">
+                          <span class="material-icons blue">
+                           live_help
+                            </span>
+                            Questionnaire sur mes expériences culturelles
+                        </ion-item>
+                    </ion-menu-toggle>
+
+            <ion-menu-toggle autoHide="false">
+                <ion-item routerLink="home/profile/details">
+                      <span class="material-icons blue">
+                        person_pin
+                      </span>
+                        Profil et À propos
+                </ion-item>
+            </ion-menu-toggle>
+
+            <ion-menu-toggle autoHide="false">
+                <ion-item (click)="logout()" button>
+                 <span class="material-icons blue">
+                 lock_open
+                </span>Déconnexion
+                </ion-item>
+            </ion-menu-toggle>
+
+                </ion-list>
+            </ion-content>
+        </ion-menu>
+        <ion-router-outlet id="main-content"></ion-router-outlet>
+    </ion-split-pane>
+  <!--  <ion-split-pane when="sm">
+
+        <ion-menu >
+            <ion-header>
+                <ion-toolbar color="secondary">
+                    <ion-title>Menu</ion-title>
+                </ion-toolbar>
+            </ion-header>
+
+            <ion-content class="menu-container">
+                <ion-list no-lines>
+                    <button menuClose ion-item   class="transparent list-item">
+                        ddfgfg
+                    </button>&ndash;&gt;
+                    <button menuClose ion-item   class="transparent list-item">
+                        ddfgfg
+                    </button>&ndash;&gt;
+                </ion-list>
+            </ion-content>
+
+        </ion-menu>
+
+        &lt;!&ndash; Disable swipe-to-go-back because it's poor UX to combine STGB with side menus &ndash;&gt;
+        <ion-nav [root]="" #content main swipeBackEnabled="false"></ion-nav>
+    </ion-split-pane>-->
+</ion-app>
+
